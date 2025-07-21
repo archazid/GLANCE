@@ -1,4 +1,4 @@
-name: clbi
+name: codefect
 channels:
   - conda-forge
 dependencies:

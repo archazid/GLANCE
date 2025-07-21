@@ -4,6 +4,7 @@
 /file_embedding_cache/
 /line_embedding_cache/
 /result/
+/exps/
 /tmp/
 
 # Mac OS-specific storage files

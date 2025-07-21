@@ -53,7 +53,7 @@ INDICATORS = [
 ]
 
 # Define the output directory for our analysis results
-OUTPUT_PATH = os.path.join(PROJECT_ROOT, "exps/ThesisAnalysis/")
+OUTPUT_PATH = os.path.join(PROJECT_ROOT, "exps/results/")
 make_path(OUTPUT_PATH)
 
 

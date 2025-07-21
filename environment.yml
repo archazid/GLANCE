@@ -1,0 +1,34 @@
+name: clbi
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11  # Our beloved programming language! :)
+  - pip  # Python's package-management system
+  - typer  # A library for building command-line interface (CLI)
+  - loguru  # Python logging made (stupidly) simple
+  - tqdm  # a Python library that wraps any iterable with a smart progress meter
+  - ipython  # A powerful Python shell
+  - gensim  # Python framework for fast Vector Space Modelling
+  - joblib  # Lightweight pipelining with Python functions
+  - jupyterlab  # JupyterLab computational environment
+  - matplotlib  # Python plotting package
+  - more-itertools  # More routines for operating on iterables, beyond itertools
+  - notebook  # A web-based Jupyter notebook environment for interactive computing
+  - numpy  # Fundamental package for array computing in Python
+  - scipy  # Fundamental algorithms for scientific computing in Python
+  - pandas  # Powerful data structures for data analysis, time series, and statistics
+  - pillow  # Python imaging library
+  - scikit-learn  # A set of python modules for machine learning and data mining
+  - seaborn  # Statistical data visualization
+  - lightgbm  # LightGBM is a gradient boosting framework that uses tree based learning algorithms
+  - ruff  # An extremely fast Python linter and code formatter
+  - pip:
+    - python-dotenv  # Read key-value pairs from a .env file and set them as environment variables
+    - mkdocs  # Project documentation with Markdown
+    - transformers  # State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow
+    - tensorboard  # TensorFlow's visualization toolkit
+    - tensorflow  # Software library for high performance numerical computation
+    - torch  # Tensors and Dynamic neural networks in Python with strong GPU acceleration
+    - torchvision  # Image and video datasets and models for torch deep learning
+    - torchaudio  # An audio package for PyTorch
+    - --extra-index-url https://download.pytorch.org/whl/cu128

@@ -7,7 +7,7 @@ import os
 
 # Ensure the project root is in the Python path
 # Modify this path to match the location on your machine
-PROJECT_ROOT = "C:/Users/Archazid/projects/CLBI/"
+PROJECT_ROOT = "C:/Users/Archazid/projects/GLANCE/"
 sys.path.append(PROJECT_ROOT)
 
 # Import all models we want to analyze
@@ -43,10 +43,12 @@ INDICATORS = [
     "precision",
     "recall",
     "far",
+    "ce",
     "d2h",
     "mcc",
     "ifa",
     "recall_20",
+    "ratio",
 ]
 
 # Define the output directory for our analysis results

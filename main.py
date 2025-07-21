@@ -71,6 +71,9 @@ def run_default():
     run_cross_release_predict(Glance_LR)
     run_cross_release_predict(Glance_EA)
     run_cross_release_predict(Glance_MD)
+    run_cross_release_predict(GlancePlus_File)
+    run_cross_release_predict(GlancePlus_Line_LR)
+    run_cross_release_predict(GlancePlus)
     pass
 
 

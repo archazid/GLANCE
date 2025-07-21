@@ -5,7 +5,7 @@ import sys
 # --------------------------------
 # Code Path
 # --------------------------------
-CODE_PATH = "C:/Users/Archazid/projects/CLBI/"
+CODE_PATH = "C:/Users/Archazid/projects/GLANCE/"
 sys.path.append(CODE_PATH)
 
 # --------------------------------

@@ -4,21 +4,11 @@ import time
 import pandas as pd
 import warnings
 from warnings import simplefilter
-# from src.models.explain import (
-#     LineDP,
-#     TMI_DT,
-#     TMI_LR,
-#     TMI_MNB,
-#     TMI_RF,
-#     TMI_SVM,
-# )
+
 from src.models.glance import Glance_EA, Glance_LR, Glance_MD
 from src.models.glance_plus_file import GlancePlus_File
 from src.models.glance_plus_line import GlancePlus_Line_LR
 from src.models.glance_plus import GlancePlus
-from src.models.glance_bert import Glance_FileBERT
-from src.models.natural import NGram, NGram_C
-from src.models.tools import PMD, CheckStyle
 from src.utils.helper import get_project_releases_dict
 
 # Ignore common FutureWarnings from libraries like pandas
@@ -35,21 +25,6 @@ MODEL_DICT = {
     "GlancePlus_File": GlancePlus_File,
     "GlancePlus_Line_LR": GlancePlus_Line_LR,
     "GlancePlus": GlancePlus,
-    # GLANCE-BERT Models
-    "Glance_FileBERT": Glance_FileBERT,
-    # Model Interpretation Technique (MIT) Models
-    # "LineDP": LineDP,
-    # "TMI_LR": TMI_LR,
-    # "TMI_SVM": TMI_SVM,
-    # "TMI_MNB": TMI_MNB,
-    # "TMI_DT": TMI_DT,
-    # "TMI_RF": TMI_RF,
-    # Natural Language Processing (NLP) Models
-    "NGram": NGram,
-    "NGram_C": NGram_C,
-    # Static Analysis Tool (SAT) Models
-    "PMD": PMD,
-    "CheckStyle": CheckStyle,
 }
 
 
@@ -93,19 +68,9 @@ def run_cross_release_predict(prediction_model, save_time=False):
 
 
 def run_default():
-    # run_cross_release_predict(NGram)
-    # run_cross_release_predict(NGram_C)
-    # run_cross_release_predict(TMI_LR)
-    # run_cross_release_predict(TMI_MNB)
-    # run_cross_release_predict(TMI_RF)
-    # run_cross_release_predict(TMI_DT)
-    # run_cross_release_predict(TMI_SVM)
     run_cross_release_predict(Glance_LR)
     run_cross_release_predict(Glance_EA)
     run_cross_release_predict(Glance_MD)
-    # run_cross_release_predict(LineDP)
-    # run_cross_release_predict(PMD,save_time=True)
-    # run_cross_release_predict(CheckStyle, save_time=True)
     pass
 
 

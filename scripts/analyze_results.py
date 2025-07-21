@@ -15,7 +15,6 @@ from src.models.glance import Glance_EA, Glance_LR, Glance_MD
 from src.models.glance_plus_file import GlancePlus_File
 from src.models.glance_plus_line import GlancePlus_Line_LR
 from src.models.glance_plus import GlancePlus
-from src.models.glance_bert import Glance_FileBERT
 
 from src.utils.helper import make_path, get_project_releases_dict, get_project_list
 
@@ -37,8 +36,6 @@ MODELS_TO_ANALYZE = {
     "GLANCE+Line": GlancePlus_Line_LR,
     # Combined Approaches
     "GLANCE+": GlancePlus,
-    # GLANCE-BERT
-    "GLANCE-BERT": Glance_FileBERT,
 }
 
 # Define the performance indicators to be analyzed

@@ -27,8 +27,6 @@ warnings.filterwarnings("ignore")
 # The key is the desired column name in the output, the value is the model class
 MODELS_TO_ANALYZE = {
     # Original Baselines
-    "GLANCE-MD": Glance_MD,
-    "GLANCE-EA": Glance_EA,
     "GLANCE-LR": Glance_LR,
     # Enhanced File-Level Classifier Only
     "GLANCE+File": GlancePlus_File,

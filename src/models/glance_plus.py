@@ -254,6 +254,7 @@ class GlancePlus(BaseModel):
 
 
 # --- THE GLANCE++ MODEL WITH HYBRID FEATURE SET ---
+# Note: Will be implemented on Phase 2 of my research plan
 class GlancePlus_Hybrid(BaseModel):
     """
     The GLANCE++ model with the following improvements:

@@ -2,13 +2,12 @@
 import pandas as pd
 import numpy as np
 
+
 # --- IMPORTANT NOTE FOR YOUR THESIS ---
 # This file provides a TEMPLATE for extracting hybrid features.
 # The function `extract_hybrid_features` currently generates MOCK data.
-# For your actual research, you will need to replace the mock data generation
-# with real feature extraction using the libraries mentioned in the comments.
 
-
+# Note: Will be implemented on Phase 2 of my research plan
 def extract_hybrid_features(release_name: str, file_list: list) -> pd.DataFrame:
     """
     Extracts a hybrid set of features for a given list of files in a release.
@@ -28,11 +27,11 @@ def extract_hybrid_features(release_name: str, file_list: list) -> pd.DataFrame:
     print(f"Extracting hybrid features for {len(file_list)} files in {release_name}...")
 
     # --- REAL IMPLEMENTATION GUIDE ---
-    # You would use libraries here to get the real data.
+    # Use proper libraries here to get the real data.
     #
     # 1. For Process Metrics (Code Churn, etc.):
     #    - Use the 'pydriller' library (pip install pydriller).
-    #    - For each file in file_list, you can iterate through its commit history
+    #    - For each file in file_list, iterate through its commit history
     #      to calculate revisions, authors, age, etc.
     #    - Example: `from pydriller import Repository`
     #               `for commit in Repository('path/to/your/repo', to_commit='tag_of_release').traverse_commits():`
@@ -40,13 +39,13 @@ def extract_hybrid_features(release_name: str, file_list: list) -> pd.DataFrame:
     #               `        if modified_file.new_path in file_list: ...`
     #
     # 2. For Complexity and CK Metrics:
-    #    - For Java, you can use command-line tools like 'CK' (https://github.com/mauricioaniche/ck)
+    #    - For Java, use command-line tools like 'CK' (https://github.com/mauricioaniche/ck)
     #      or 'MetricsReloaded' (https://github.com/MetricsReloaded/MetricsReloaded).
-    #    - You would run this tool on the codebase of the specific release and parse its CSV output.
+    #    - Run this tool on the codebase of the specific release and parse its CSV output.
     #
     # --- MOCK IMPLEMENTATION (for demonstration and testing) ---
-    # We generate random data to make this script runnable without the full toolchain.
-    # Replace this section with your real implementation.
+    # Generate random data to make this script runnable without the full toolchain.
+    # Replace this section with the real implementation.
 
     num_files = len(file_list)
     mock_data = {

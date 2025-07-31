@@ -96,6 +96,7 @@ class GlancePlus_File(Glance):
     # simple line-level ranking heuristic after its superior file-level prediction is done.
 
 
+# Note: Will be implemented on Phase 2 of my research plan
 class GlancePlus_File_Hybrid(Glance):
     """
     A professional-grade GLANCE model that uses:

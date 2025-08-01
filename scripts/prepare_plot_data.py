@@ -21,7 +21,7 @@ MODELS_TO_PLOT = {
     # Enhanced Line-Level Metrics Only
     "GLANCE+Line": GlancePlus_Line_LR,
     # Combined Approaches
-    "GLANCE+": GlancePlus,
+    "GLANCE++": GlancePlus,
 }
 
 

@@ -33,7 +33,7 @@ MODELS_TO_ANALYZE = {
     # Enhanced Line-Level Metrics Only
     "GLANCE+Line": GlancePlus_Line_LR,
     # Combined Approaches
-    "GLANCE+": GlancePlus,
+    "GLANCE++": GlancePlus,
 }
 
 # Define the performance indicators to be analyzed

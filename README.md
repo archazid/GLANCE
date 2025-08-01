@@ -76,10 +76,10 @@ This research evaluates the original GLANCE baselines against a series of newly 
 
 | Approach Category | Model Name | Source File | Description |
 | :--- | :--- | :--- | :--- |
-| **Baselines** | `GLANCE-MD`, `GLANCE-EA`, `GLANCE-LR` | `src/models/glance.py` | The original heuristic models from Guo et al. (2023). |
-| **Task 1 Enhancement** | `GlancePlus_Line_LR` | `src/models/glance_plus_line.py` | Enhances **line-level metrics** (CCS, AW-NFC, SCC) with the original LR file-level classifier. |
-| **Task 2 Enhancement** | `GlancePlus_File` | `src/models/glance_plus_file.py` | Enhances the **file-level classifier** with a non-linear ensemble model LightGBM. |
-| **Task 3 (Combined)** | `GlancePlus` | `src/models/glance_plus.py` | **Combines enhancements**: LightGBM classifier with enhanced line-level metrics. |
+| **Baselines** | `GLANCE-LR` | `src/models/glance.py` | The original heuristic models from Guo et al. (2023). |
+| **Task 1 Enhancement** | `GLANCE+File` | `src/models/glance_plus_file.py` | Enhances the **file-level classifier** with a non-linear ensemble model LightGBM. |
+| **Task 2 Enhancement** | `GLANCE+Line` | `src/models/glance_plus_line.py` | Enhances **line-level metrics** (CCS, AW-NFC, SCC) with the original LR file-level classifier. |
+| **Task 3 (Combined)** | `GLANCE++` | `src/models/glance_plus.py` | **Combines enhancements**: LightGBM classifier with enhanced line-level metrics. |
 
 ---
 

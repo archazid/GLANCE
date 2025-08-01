@@ -14,7 +14,7 @@ MODEL_ORDER = [
     "GLANCE-LR",
     "GLANCE+File",
     "GLANCE+Line",
-    "GLANCE+",
+    "GLANCE++",
 ]
 
 # Define which metrics to plot and their y-axis labels

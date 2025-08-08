@@ -1,6 +1,7 @@
 # scripts/create_boxplots.py
 import pandas as pd
 import seaborn as sns
+import matplotlib.lines as mlines
 import matplotlib.pyplot as plt
 import os
 
@@ -39,12 +40,21 @@ sns.set_theme(style="whitegrid")
 
 # Create a 2x4 figure for our subplots
 fig, axes = plt.subplots(2, 4, figsize=(24, 12))
-fig.suptitle(
-    "Comprehensive Performance Comparison of GLANCE Model Variants", fontsize=24, y=0.97
-)
 
 # Flatten the 2x4 axes array into a 1D array for easy iteration
 axes = axes.flatten()
+
+# Custom categorical palette
+CUSTOM_PALETTE = sns.color_palette(
+    [
+        "#4575b4",  # blue
+        "#d73027",  # red
+        "#74add1",  # light blue
+        "#f46d43",  # orange
+    ]
+)
+# Map colours to model names so every subplot stays consistent
+PALETTE_DICT = dict(zip(MODEL_ORDER, CUSTOM_PALETTE))
 
 # Generate one boxplot for each metric
 for i, (metric, y_label) in enumerate(METRICS_TO_PLOT.items()):
@@ -57,7 +67,25 @@ for i, (metric, y_label) in enumerate(METRICS_TO_PLOT.items()):
         data=df,
         order=MODEL_ORDER,
         ax=ax,
-        palette="viridis",
+        palette=PALETTE_DICT,
+        showmeans=True,
+        meanprops={  # ← customise the marker
+            "marker": "s",  # square
+            "markerfacecolor": "white",
+            "markeredgecolor": "black",
+            "markersize": 6,
+        },
+        medianprops={
+            "color": "black",
+            "linewidth": 1,
+        },  # emphasise median line
+        flierprops={
+            "marker": "D",  # diamond like Guo et al.
+            "markerfacecolor": "red",
+            "markeredgecolor": "red",
+            "markersize": 4,
+            "linestyle": "none",
+        },
     )
 
     # Customize labels and titles for each subplot
@@ -69,6 +97,35 @@ for i, (metric, y_label) in enumerate(METRICS_TO_PLOT.items()):
 
 # Adjust layout to prevent titles and labels from overlapping
 plt.tight_layout(rect=[0, 0, 1, 0.95])
+
+# Adding a legend
+median_proxy = mlines.Line2D([], [], color="black", linewidth=1)
+mean_proxy = mlines.Line2D(
+    [],
+    [],
+    marker="s",
+    markersize=6,
+    markerfacecolor="white",
+    markeredgecolor="black",
+    linestyle="None",
+)
+outlier_proxy = mlines.Line2D(
+    [],
+    [],
+    marker="D",
+    markersize=4,
+    markerfacecolor="red",
+    markeredgecolor="red",
+    linestyle="None",
+)
+
+fig.legend(
+    [median_proxy, mean_proxy, outlier_proxy],
+    ["Median line", "Mean value", "Outliers"],
+    loc="upper center",
+    ncol=3,
+    frameon=False,
+)
 
 # Save the final figure to a file
 plt.savefig(OUTPUT_FILE, dpi=300)

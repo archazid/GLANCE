@@ -9,6 +9,7 @@ from src.models.glance import Glance_EA, Glance_LR, Glance_MD
 from src.models.glance_plus_file import GlancePlus_File
 from src.models.glance_plus_line import GlancePlus_Line_LR
 from src.models.glance_plus import GlancePlus
+from src.models.glance_bert import Glance_FileBERT, Glance_FileBERT_Pro
 from src.utils.helper import get_project_releases_dict
 
 # Ignore common FutureWarnings from libraries like pandas
@@ -25,6 +26,9 @@ MODEL_DICT = {
     "GlancePlus_File": GlancePlus_File,
     "GlancePlus_Line_LR": GlancePlus_Line_LR,
     "GlancePlus": GlancePlus,
+    # GLANCE BERT
+    "Glance_FileBERT": Glance_FileBERT,
+    "Glance_FileBERT_Pro": Glance_FileBERT_Pro,
 }
 
 
